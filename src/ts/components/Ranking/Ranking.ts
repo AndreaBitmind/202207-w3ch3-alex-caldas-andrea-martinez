@@ -4,8 +4,8 @@ class Ranking implements IRanking {
   element: HTMLElement;
 
   constructor(childAmount: number) {
-    const container = document.createElement("ul");
-    container.className = "score";
+    this.element = document.createElement("ul");
+    this.element.className = "score";
     for (let i = 1; i <= childAmount; i += 1) {
       const child = document.createElement("li");
       child.className = "score__star";
@@ -13,10 +13,9 @@ class Ranking implements IRanking {
       icon.className = "icon-score far fa-star";
       icon.title = `${i}/${childAmount}`;
       child.appendChild(icon);
-      container.appendChild(child);
+      this.element.appendChild(child);
     }
-
-    document.body.appendChild(container);
+    document.body.appendChild(this.element);
   }
 }
 

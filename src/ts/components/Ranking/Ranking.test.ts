@@ -1,7 +1,8 @@
-import Ranking from "./Ranking.js";
+/* eslint-disable import/extensions */
+import Ranking from "./Ranking";
 
 /* 
-- un raking debe crear un elemento ul padre de múltiples elementos li que cada uno contiene un icono
+- un ranking debe crear un elemento ul padre de múltiples elementos li 
 - un raking debe mostrar una lista de iconos
 - cuando el usuario haga clic en el icono, cambia a estilo opaco
 - cuando un icono es seleccionada, los iconos de su izquierda cambian de estado con ella
@@ -10,12 +11,12 @@ import Ranking from "./Ranking.js";
  */
 
 describe("Given a Ranking component", () => {
-  describe("When instantiated anywhere", () => {
-    test("Then it should show a ul parent with multiple li", () => {
+  describe("When instantiated with 10 childs", () => {
+    test("Then it should show a ul parent with 10 li", () => {
       const childAmount = 10;
+      const child = new Ranking(childAmount);
 
-      const ranking = new Ranking(childAmount);
-      const ulParent = ranking.element.querySelector("ul");
+      expect(child.element.childNodes.length).toEqual(childAmount);
     });
   });
 
