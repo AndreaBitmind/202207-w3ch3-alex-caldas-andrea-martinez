@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import Ranking from "./components/Ranking/Ranking.js";
 
-const test = new Ranking(5);
+new Ranking(5);
