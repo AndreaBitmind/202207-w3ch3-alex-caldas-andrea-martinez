@@ -12,10 +12,10 @@ import Ranking from "./Ranking.js";
 describe("Given a Ranking component", () => {
   describe("When instantiated anywhere", () => {
     test("Then it should show a ul parent with multiple li", () => {
-      const container = document.createElement("ul");
-      const element = document.createElement("li");
+      const childAmount = 10;
 
-      console.log(Ranking, container, element);
+      const ranking = new Ranking(childAmount);
+      const ulParent = ranking.element.querySelector("ul");
     });
   });
 

@@ -1,4 +1,8 @@
-class Ranking {
+import IRanking from "../../types/interfaces.js";
+
+class Ranking implements IRanking {
+  element: HTMLElement;
+
   constructor(childAmount: number) {
     const container = document.createElement("ul");
     container.className = "score";
