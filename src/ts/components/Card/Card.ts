@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/lines-between-class-members */
 import { Icomponent, Serie } from "../../types/interfaces.js";
 import Component from "../Component/Component.js";
-import Ranking from "../Ranking/Ranking.js";
 
 class Card extends Component implements Icomponent {
   namePoster: string;
