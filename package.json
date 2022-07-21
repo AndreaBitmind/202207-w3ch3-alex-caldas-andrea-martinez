@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest src -w",
     "ts-dev": "tsc -w",
+    "ts-prod": "tsc",
     "prepare": "husky install"
   },
   "keywords": [],
