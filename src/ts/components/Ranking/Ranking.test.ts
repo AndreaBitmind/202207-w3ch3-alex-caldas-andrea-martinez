@@ -14,13 +14,21 @@ describe("Given a Ranking component", () => {
   describe("When instantiated with 10 childs", () => {
     test("Then it should show a ul parent with 10 li", () => {
       const childAmount = 10;
-      const child = new Ranking(childAmount);
+      const parent = new Ranking(childAmount);
 
-      expect(child.element.childNodes.length).toEqual(childAmount);
+      expect(parent.element.childNodes.length).toEqual(childAmount);
     });
   });
 
-  describe("When instantatied with 5 as li child elements", () => {
-    test("Then it should show 5 li with icons inside", () => {});
+  describe("When instantatied with 1 as li child elements", () => {
+    test("Then it should show 1 li with icons inside", () => {
+      const childAmount = 1;
+      const parent = new Ranking(childAmount);
+      const firstChild = parent.element.getElementsByTagName("li")[0];
+      const icon = firstChild.getElementsByTagName("i");
+
+      expect(icon.length).toBe(1);
+      expect(icon[0].getAttribute("class")).toBe("icon-score far fa-star");
+    });
   });
 });
