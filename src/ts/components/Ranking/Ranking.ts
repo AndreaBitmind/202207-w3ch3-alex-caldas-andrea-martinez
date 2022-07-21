@@ -1,4 +1,4 @@
-import IRanking from "../../types/interfaces.js";
+import { IRanking } from "../../types/interfaces.js";
 
 class Ranking implements IRanking {
   element: HTMLElement;
