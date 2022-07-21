@@ -4,4 +4,4 @@ import Card from "./components/Card/Card.js";
 import series from "./components/series/series.js";
 
 new Ranking(5);
-new Card(document.body, "caca", series[0]);
+new Card(document.body, "nombre del poster", series[0]);
