@@ -5,7 +5,11 @@ export interface Icomponent {
 }
 
 export interface IRanking {
-  element: HTMLElement;
+  childAmount: number;
+  child: HTMLElement;
+
+  createList?: () => void;
+  addEventListener?: () => void;
 }
 
 export interface Serie {

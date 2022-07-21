@@ -11,10 +11,11 @@ import Ranking from "./Ranking";
  */
 
 describe("Given a Ranking component", () => {
+  const div = document.createElement("div");
   describe("When instantiated with 10 childs", () => {
     test("Then it should show a ul parent with 10 li", () => {
       const childAmount = 10;
-      const parent = new Ranking(childAmount);
+      const parent = new Ranking(div, childAmount);
 
       expect(parent.element.childNodes.length).toEqual(childAmount);
     });
@@ -23,7 +24,7 @@ describe("Given a Ranking component", () => {
   describe("When instantatied with 1 as li child elements", () => {
     test("Then it should show 1 li with icons inside", () => {
       const childAmount = 1;
-      const parent = new Ranking(childAmount);
+      const parent = new Ranking(div, childAmount);
       const firstChild = parent.element.getElementsByTagName("li")[0];
       const icon = firstChild.getElementsByTagName("i");
 
