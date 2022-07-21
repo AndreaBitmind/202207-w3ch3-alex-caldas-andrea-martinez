@@ -1,5 +1,9 @@
-interface IRanking {
+export interface Icomponent {
   element: HTMLElement;
+  render?: () => void;
+  addListeners?: () => void;
 }
 
-export default IRanking;
+export interface IRanking {
+  element: HTMLElement;
+}
